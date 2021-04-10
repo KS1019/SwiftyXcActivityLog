@@ -11,7 +11,7 @@ import Gzip
 
 public class XcActivityLog {
     var productName: String
-    init(productName: String) {
+    public init(productName: String) {
         self.productName = productName
     }
     
