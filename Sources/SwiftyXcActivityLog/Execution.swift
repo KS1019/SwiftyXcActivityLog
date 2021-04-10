@@ -21,12 +21,12 @@ public struct Execution: Hashable {
         }
     }
     
-    var time: TimeInterval
-    var file: File?
-    var isInvalidLocation: Bool = false
-    var methodName: String
-    var line: Int
-    var column: Int
+    public var time: TimeInterval
+    public var file: File?
+    public var isInvalidLocation: Bool = false
+    public var methodName: String
+    public var line: Int
+    public var column: Int
     
     public func hash(into hasher: inout Hasher) {
         if file != nil {
