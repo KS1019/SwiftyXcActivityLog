@@ -9,7 +9,7 @@ import Foundation
 import Files
 import Gzip
 
-class XcActivityLog {
+public class XcActivityLog {
     var productName: String
     init(productName: String) {
         self.productName = productName

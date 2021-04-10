@@ -8,7 +8,7 @@
 import Foundation
 import Files
 
-struct Execution: Hashable {
+public struct Execution: Hashable {
     internal init(time: TimeInterval, file: File?, methodName: String, line: Int, column: Int) {
         self.time = time
         self.file = file
@@ -39,7 +39,7 @@ struct Execution: Hashable {
         hasher.combine(column)
     }
     
-    static func == (lhs: Execution, rhs: Execution) -> Bool {
+    public static func == (lhs: Execution, rhs: Execution) -> Bool {
         return lhs.file == rhs.file
             && lhs.line == rhs.line
             && lhs.column == rhs.column
