@@ -2,13 +2,17 @@ import XCTest
 @testable import SwiftyXcActivityLog
 
 final class SwiftyXcActivityLogTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
+    func testUniqueElements() {
+        let dupArray: [Int] = [1, 2, 3, 1, 2, 3]
+        let noDupArray: [Int] = [1, 2, 3]
+        XCTAssertEqual(dupArray.uniqueElements(noUnique: false), noDupArray)
+    }
+    
+    func testLibraryDir() {
+        
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testUniqueElements", testUniqueElements)
     ]
 }
