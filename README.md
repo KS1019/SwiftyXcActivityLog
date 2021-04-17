@@ -5,7 +5,8 @@
 ## Install
 You can install this package via Swift Package. 
 
-Simply add ```swift 
+Simply add 
+```swift 
 .package(name: "SwiftyXcActivityLog", url: "https://github.com/KS1019/SwiftyXcActivityLog", .upToNextMajor(from: "0.0.5"))
 ```
 to your dependecies in your Package.swift.
