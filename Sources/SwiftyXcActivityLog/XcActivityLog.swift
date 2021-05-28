@@ -94,7 +94,7 @@ public class XcActivityLog {
     public func asExecutions() -> [Execution]? {
         guard let array = asStringArray() else { return nil }
         return array.map { line in
-            guard line.readByPattern() else { return nil }
+            guard line.isReadableByPattern() else { return nil }
             let components = line.split(separator: "\t", maxSplits: 3)
             var timeString = String(components[0])
             timeString = String(timeString[timeString.startIndex ..< (timeString.firstIndex(of: "m") ?? timeString.endIndex)])

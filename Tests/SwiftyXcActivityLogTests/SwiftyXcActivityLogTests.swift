@@ -14,7 +14,7 @@ final class SwiftyXcActivityLogTests: XCTestCase {
         let testString = """
 0.01ms    /Users/testUser/Desktop/app-icon-resize-machine/app-icon-resize-machine/main.swift:19:16    setter configuration
 """
-        XCTAssertTrue(testString.readByPattern())
+        XCTAssertTrue(testString.isReadableByPattern())
     }
 
     static var allTests = [

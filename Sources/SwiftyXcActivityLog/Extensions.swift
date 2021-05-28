@@ -24,8 +24,7 @@ extension Array where Element: Hashable {
 }
 
 extension String {
-    func readByPattern() -> Bool {
-        let pattern = "^[0-9.]+ms\\s+.+?\\s+.+$"
+    func isReadableByPattern(pattern: String = "^[0-9.]+ms\\s+.+?\\s+.+$") -> Bool {
         guard let regex = try? NSRegularExpression(pattern: pattern) else { print("NSRegularExpression failed");return false }
         let matches = regex.numberOfMatches(in: self, options:[],range: NSRange(location: 0, length: self.count))
         return matches > 0
