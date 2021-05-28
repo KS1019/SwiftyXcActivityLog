@@ -26,5 +26,5 @@ guard let strArray = log.asStringArray() else { return }
 ```
 
 ## Alternatives
-- [spotify/XCLogParser](https://github.com/spotify/XCLogParser)
+- [mobileNativeFoundation/XCLogParser](https://github.com/mobileNativeFoundation/XCLogParser)
 - [giginet/xcprofiler](https://github.com/giginet/xcprofiler)
