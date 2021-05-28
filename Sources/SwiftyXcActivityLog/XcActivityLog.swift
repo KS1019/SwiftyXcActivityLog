@@ -15,9 +15,9 @@ public class XcActivityLog {
         self.productName = productName
     }
     
-    private func getProductFolder(by productName: String) -> Folder? {
+    private func getProductFolder(by productName: String, in root: String = "Library/Developer/Xcode/DerivedData") -> Folder? {
         do {
-            guard let folders = try Folder.library?.subfolder(at: "Developer/Xcode/DerivedData").subfolders else { return nil }
+            let folders = try Folder(path: root).subfolders
             let filteredFolders = folders.filter { (folder) -> Bool in
                 return folder.name.contains(productName)
             }
