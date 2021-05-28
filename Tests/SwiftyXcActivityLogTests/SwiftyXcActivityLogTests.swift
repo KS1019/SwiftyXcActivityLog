@@ -10,15 +10,14 @@ final class SwiftyXcActivityLogTests: XCTestCase {
         XCTAssertEqual(dupArray.uniqueElements(noUnique: false), noDupArray)
     }
 
-    func testReadByPattern() {
-        let testString = """
-0.01ms    /Users/testUser/Desktop/app-icon-resize-machine/app-icon-resize-machine/main.swift:19:16    setter configuration
-"""
-        XCTAssertTrue(testString.isReadableByPattern())
+    func testIsReadableByPatternFunction() {
+        XCTAssertTrue("0.01ms    /Users/testUser/Desktop/app-icon-resize-machine/app-icon-resize-machine/main.swift:19:16    setter configuration".isReadableByPattern())
+        
+        XCTAssertFalse("This sentence should not be readable by pattern".isReadableByPattern())
     }
 
     static var allTests = [
         ("testUniqueElements", testUniqueElements),
-        ("testReadByPattern", testReadByPattern)
+        ("testIsReadableByPatternFunction", testIsReadableByPatternFunction)
     ]
 }
